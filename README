@@ -1,1 +1,49 @@
-Howdy! Welcome to the LaTeX to CV project!
+Howdy! Welcome to the LaTeX to CV project.
+
+This directory contains version 1.0 of the LaTeX to CV minimal working examples, sample and source code.
+
+TEAM
+----
+	
+	Author: Anna-Maria Müller
+	Site: http://text-ex-machina.co.uk/
+	Contact: textexmachina@gmail.com
+	Twitter: @amy_mueller
+	Location: Swindon, United Kingdom  
+
+DESCRIPTION
+-----------
+
+The LaTeX to CV examples and code snippets help you to learn how to build a curriculum vitae / CV or resume using LaTeX and the CurVe document class. The project is maintained by Amy Muller of TeXt ex machina.
+
+
+USING IT
+--------
+
+In order to run the source code and build your CV (CV.pdf) you'll need a working LaTeX installation. More information on LaTeX can be found at
+
+  http://www.latex-project.org/
+  
+In addition, you will need a current version of Didier Verna's CurVe document class which can be found at
+
+  http://www.ctan.org/pkg/curve
+
+
+DOWNLOADING
+-----------
+
+The LaTeX to CV examples can be downloaded here:
+
+  http://github.com/ArwensAbendstern/CV-LaTeX
+
+
+BUG REPORTING
+-------------
+
+If you find any bugs, be sure to let me know: You can send bug reports to <textexmachina@gmail.com>.
+
+-------------------------------------------------------------------------------
+Copyright (C) 2011 Amy Muller, TeXt ex machina.
+This file is part of LaTeX to CV project.
+
+LaTeX to CV is published under a Creative Commons Attribution 3.0 Unported License.
