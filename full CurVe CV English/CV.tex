@@ -1,0 +1,61 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,skipsamekey,12pt,english]{curve} % your specs, esp the language of your CV
+
+\usepackage[T1]{fontenc} % special characters, etc.
+\usepackage[a4paper,nohead,nofoot,hmargin=2cm,vmargin=2cm]{geometry} % adapt to your specs
+
+\usepackage[english]{babel} % the language of your CV
+\usepackage{textcomp} % Trademarks and other symbols
+
+\usepackage{color} % e.g. for coloured links
+\usepackage[colorlinks]{hyperref} % clickable links in the PDF
+\definecolor{darkblue}{rgb}{0,0,.5}  % defines link colour
+
+%%% setup the options for the hyperref package
+\hypersetup{%
+ pdftex=true,%
+ colorlinks=true,% 
+ breaklinks=true,%
+ linkcolor=darkblue,%
+ menucolor=darkblue,%
+ urlcolor=darkblue,%
+ }
+
+%%% if you want to include flavors:
+% \flavor{corp} % corp version of the experience rubric
+% \flavor{academic} % academic version of the experience rubric
+
+%%% if you want different title styles
+% \input{title.online.ltx}
+% \input{title.print.ltx}
+
+%%% if you don't need different title styles:
+
+\title{Graduate Student} % Who are you? e. g. Assistant Professor, Chief Engineer, Senior Executive 
+
+\subtitle{at the Peace Institute, Z\"urich, Switzerland} % a bit more info about you
+
+% vertical space after subrubric
+\setlength \subrubricspace{3ex} % CurVe default: 5pt
+
+% special characters as bullet point symbols
+ \usepackage{pifont} % only if you need them
+ \prefix{\ding{43}} % pointing finger as a bullet list item symbol 
+
+% if rubric is spread onto multiple pages, the rubric name is repeated and followed by:
+\continuedname{~~(continued)} % for a CV in English
+
+
+\begin{document}
+\maketitle
+
+% call the rubric files in preferred order
+% make sure your file names are correct
+
+\makerubric{experience} % calls experience.ltx
+\makerubric{education}  % calls education.ltx
+\makerubric{skills} % calls skills.ltx
+\makerubric{references} % calls references.ltx
+\makerubric{publications} % calls publications.ltx
+
+\end{document} % end of main document CV.ltx
