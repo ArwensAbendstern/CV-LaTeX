@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,skipsamekey,12pt,english]{curve}
+\usepackage[applemac]{inputenc} % fuer Macuser
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,nohead,nofoot,hmargin=2cm,vmargin=2cm]{geometry} % die Raender je nach Bedarf anpassen
+
+\usepackage[english]{babel} % die Sprachen einstellen, die Du benoetigst
+\usepackage{textcomp} % Paket um Trademarks etc. kennzeichnen zu koennen
+
+\usepackage{color} % farbige Links
+\usepackage[colorlinks]{hyperref} % klickbare Links im PDF
+\definecolor{darkblue}{rgb}{0,0,.5}  % dunkelblaue Links
+\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue}
+
+% Wer bist Du? z. B. Assistant Professor, Chief Engineer, Senior Executive:
+\title{Graduate Student}
+
+% Beschreibe Dich genauer, z.B.
+\subtitle{at the Peace Institute, Z\"urich, Switzerland}
+
+% Abstand zwischen dem Titel einer Subrubrik und der folgenden Aufzaehlung
+\setlength\subrubricspace{3ex}
+
+% Anpassung/Einstellung fuer Aufzaehlungszeichen vor den Taetigkeitsbeschreibungen:
+ \usepackage{pifont} % nur falls man die Aufzaehlungszeichen braucht
+ \prefix{\ding{43}} % setzt einen Zeigefinger als Listenpunkt vor den Eintrag
+
+% falls eine Rubrik ueber die Seite hinausreicht, wird die Rubrikueberschrift auf der naechsten Seite wiederholt, gefolgt von einem Fortsetzungshinweis in Klammern:
+\continuedname{~~(continued)} % Englisch
+\begin{document}
+\maketitle
+
+% laedt die vorhandenen Einzelrubriken in der aufgefuehrten Reihenfolge
+% Dateinamen muessen mit den Rubrik-Datainamen uebereinstimmen
+
+\makerubric{experience}
+
+\end{document} % schliesst das Hauptdokument

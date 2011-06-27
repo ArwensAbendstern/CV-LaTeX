@@ -1,0 +1,125 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,skipsamekey,12pt,english]{curve}
+
+\usepackage[english]{babel} % die Sprachen einstellen, die Du benoetigst
+\usepackage[a4paper,nohead,nofoot,hmargin=2cm,vmargin=2cm]{geometry} % die Raender je nach Bedarf anpassen
+
+
+\usepackage{textcomp} % Paket um Trademarks etc. kennzeichnen zu k\"onnen
+
+
+% \usepackage{graphicx} % fuer Photos und Bilder
+\usepackage{color} % farbige Links
+\usepackage[colorlinks]{hyperref} % klickbare Links im PDF
+\definecolor{darkblue}{rgb}{0,0,.5}  % dunkelblaue Links
+\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue}
+
+% Kopf- und Fusszeile und jede Menge optionaler Einstellungen - 
+% siehe auch Fancyhdr Dokumentation
+% nach Geschmack und Bedarf anpassbar
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy} % fancy, falls unten weiter spezifiziert und angepasst wird
+% \fancyhf{}
+
+% wenn Du hier die Auskommentierungen l\"oschst, bitte oben auf 
+% \pagestyle{fancy} umstellen xxx???
+% Kopfzeile links bzw. innen
+	% \fancyhead[L]{} % Kopfzeile links
+	% Kopfzeile rechts bzw. aussen
+	% \fancyhead[R]{} % Kopfzeile rechts
+	% Trennlinie Kopfzeile oben
+	% \renewcommand{\headrulewidth}{0.5pt}
+
+%Fusszeile mittig
+	%\fancyfoot[C]{\thepage}% Fusszeile mitte mit Seitenzahl
+
+% Dokumentkopf:
+	% Photo einbauen
+	% \photo[r]{passphoto} % Photo im jpg, pdf oder png-Format
+	% das Photo wird rechts neben den Mail-Angaben platziert
+	% \photoscale{0.12} % nach Bedarf skalieren
+	% links oben (unter der Kopfzeile) im Lebenslauf steht
+	%\leftheader{
+		%\textbf{Johanna Musterfrau}%\\
+		% Muster Strasse 123\\
+		% 44568 Musterhausen\par
+		% Germany\\
+		% Tel: +49 (0) 12 34 56 78 9
+	%}
+	%rechts oben (unter der Kopfzeile) im Lebenslauf steht
+	%\rightheader{ % klickbare Inhalte sind zusaetzlich durch xxx gekennzeichnet
+	%\href{mailto:deine@email-adresse.xy}{\texttt{deine@email-adresse.xy}},\\
+	% \href{http://deine-homepage.de/}{\texttt{http://deine-homepage.de/}},\	% \href{mailto:mail@work.xy}{\texttt{mail@work.xy}}
+	%}
+	% Trennlinie Fusszeile
+	% \renewcommand{\footrulewidth}{0.5pt}
+
+% die Schriftformate im Folgenden je nach Geschmack, Bedarf und nach pragmatischen Aspekten gestalten
+% Folgendes sind nur einige Vorschlaege
+% Schriftformat fuer den Titel angeben/aendern
+%\titlefont{\fontfamily{pag}\selectfont\bfseries\Huge}
+
+% Wer bist Du? z. B. Assistant Professor, Chief Engineer, Senior Executive:
+\title{Graduate Student}
+% Schriftformat fuer den Untertitel angeben/aendern:
+% \subtitlefont{\fontfamily{pag}\selectfont\itshape\huge}
+
+% Beschreibe Dich genauer, z.B.
+\subtitle{at the Peace Institute, Z\"urich, Switzerland}
+
+% Schriftformat fuer die Rubrikentitel anpassen:
+% \rubricfont{\fontfamily{pag}\selectfont\bfseries\Large}
+
+% Schriftformat fuer die Subrubrikentitel anpassen:
+% \subrubricfont{\fontfamily{pag}\selectfont\bfseries\itshape\large}
+
+% Schriftformate der "Spalte" mit \entry*[]-Eintraegen (ganz links) anpassen:
+% \keyfont{\fontfamily{pag}\selectfont\bfseries} 
+
+% Abstand zwischen dem Titel einer Subrubrik und der folgenden Aufzaehlung
+\setlength\subrubricspace{3ex}
+
+% Anpassung/Einstellung fuer Aufzaehlungszeichen vor den Taetigkeitsbeschreibungen:
+ \usepackage{pifont} % nur falls man die Aufzaehlungszeichen braucht
+ \prefix{\ding{43}} % setzt einen Zeigefinger als Listenpunkt vor den Eintrag
+
+% falls eine Rubrik ueber die Seite hinausreicht, wird die Rubrikueberschrift auf der naechsten Seite wiederholt, gefolgt von einem Fortsetzungshinweis in Klammern:
+
+\continuedname{~~(continued)} % Englisch
+%\continuedname{~~(suite)} % Franz\"osisch
+%\continuedname{~~(Fortsetzung)} % Deutsch
+
+
+% flavors fuer Elemente, die nicht in einer Rubrik stehen, z. B. Header, Subtitle usw.
+% die *.ltx Datei mit den Inhalten muss mit "elementname.flavorname.ltx" benannt sein:
+
+% \input{elementname.flavorname}
+\input{subtitle.online.ltx}
+%\input{subtitle.print.ltx}
+
+% flavor-Auswahl:
+\flavor{job} % fuer die Nebenjob-Bewerbung
+%\flavor{stip} % fuer die Stipendiumsbewerbung
+
+\begin{document}
+
+% \thispagestyle{plain}
+
+% Setzt die Titelei des CV
+%\makeheaders % [t] % wenn Fancyhdr 
+\maketitle
+
+% laedt die vorhandenen Einzelrubriken in der aufgefuehrten Reihenfolge
+
+% Dateinamen muessen mit den Rubriken uebereinstimmen
+\makerubric{experience} % Engagement, praktische Erfahrungen, vorherige Jobs
+\makerubric{education} % Ausbildung
+%\clearpage % erzwingt den Beginn der neuen Rubrik auf einer neuen Seite
+
+\makerubric{skills} % Faehigkeiten, Zusatzqualifikationen, Interessen
+\makerubric{references} % Referenzen
+% falls Du eine relevante Publikationsliste hast
+\makerubric{publications}
+
+\end{document} % schliesst das Hauptdokument
